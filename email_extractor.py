@@ -77,7 +77,7 @@ def crawl(url, max_urls=30):
         pass
 
     new_emails = set(re.findall(
-        r"([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+", response.text, re.I))
+        r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", response.text, re.I))
     emails.update(new_emails)
 
     links = get_all_website_links(url)
