@@ -1,0 +1,6 @@
+re
+requests
+urlparse
+urljoin
+BeautifulSoup
+colorama
